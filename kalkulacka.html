@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kalkulačka</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://projekt1.g6.cz/bootstrap/4.css">
+    <script src="javascript.js"></script>
+    <script src="http://projekt1.g6.cz/bootstrap/4.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www.craft-lands.ml/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.craft-lands.ml/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.craft-lands.ml/favicon-16x16.png">
+    <link rel="manifest" href="https://www.craft-lands.ml/site.webmanifest">
+    <link rel="mask-icon" href="https://www.craft-lands.ml/safari-pinned-tab.svg" color="#307ff5">
+    <meta name="apple-mobile-web-app-title" content="Craft Lands.eu">
+    <meta name="application-name" content="Craft Lands.eu">
+    <meta name="msapplication-TileColor" content="#307ff5">
+    <meta name="msapplication-TileImage" content="https://www.craft-lands.ml/mstile-144x144.png">
+    <meta name="theme-color" content="#307ff5">
+    <meta charset="UTF-8">
+</head>
+<body>
+    <p id="note"></p>
+    <form name="kalkulacka" action="" method="get">
+        <div class="form-group">
+            <input type="hidden" name="kalkulacka" id="kalkulacka" class="form-control" value="" readonly>
+            <input type="text" name="input" id="input" placeholder="0" class="form-control" value="" readonly>
+            <br>
+            <button type="button" onclick="plus()" class="btn btn-primary" title="plus">+</button>
+            <button type="button" onclick="minus()" class="btn btn-primary ml-3" title="mínus">-</button>
+            <button type="button" onclick="nasob()" class="btn btn-primary ml-3" title="krát">&times;</button>
+            <button type="button" onclick="del()" class="btn btn-primary ml-3" title="děleno">&divide;</button>
+            <br>
+            <br>
+            <button type="button" onclick="modulus()" class="btn btn-primary" title="modulus - umocňování">M</button>
+            <button type="button" onclick="jedna()" class="btn btn-primary ml-3" title="1">1</button>
+            <button type="button" onclick="dva()" class="btn btn-primary ml-3" title="2">2</button>
+            <button type="button" onclick="tri()" class="btn btn-primary ml-3" title="3">3</button>
+            <br>
+            <br>
+            <button type="button" onclick="odmocniny()" class="btn btn-primary" title="odmocňování">&radic;</button>
+            <button type="button" onclick="ctyri()" class="btn btn-primary ml-3" title="4">4</button>
+            <button type="button" onclick="pet()" class="btn btn-primary ml-3" title="5">5</button>
+            <button type="button" onclick="sest()" class="btn btn-primary ml-3" title="6">6</button>
+            <br>
+            <br>
+            <a href="" onclick="wait()" class="btn btn-danger" title="vymazat">C</a>
+            <br>
+            <br>
+            <button type="submit" onclick="wait()" class="btn btn-success" title="rovná se">=</button>
+        </div>
+    </form>
+</body>
+</html>

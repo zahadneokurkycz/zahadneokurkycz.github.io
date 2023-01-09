@@ -16,7 +16,7 @@ function logout() {
   setCookie('Surname', '', 1);
   setCookie('Image', '', 1);
   setCookie('Email', '', 1);
-  var Elem = document.getElementById('data').style.display = none;
+  document.getElementById('data').style.display = none;
 }
 
 function decodeJwtResponse(token) {

@@ -1,12 +1,13 @@
 function handleCredentialResponse(response) {
   const responsePayload = decodeJwtResponse(response.credential);
 
-  console.log("ID: " + responsePayload.sub);
-  console.log('Full Name: ' + responsePayload.name);
-  console.log('Given Name: ' + responsePayload.given_name);
-  console.log('Family Name: ' + responsePayload.family_name);
-  console.log("Image URL: " + responsePayload.picture);
-  console.log("Email: " + responsePayload.email);
+  setCookie('id', responsePayload.sub, 7);
+  setCookie('Full Name: ' + responsePayload.name);
+  setCookie('Given Name: ' + responsePayload.given_name);
+  setCookie('Family Name: ' + responsePayload.family_name);
+  setCookie("Image URL: " + responsePayload.picture);
+  setCookie("Email: " + responsePayload.email);
+
 }
 
 function decodeJwtResponse(token) {
@@ -18,4 +19,27 @@ function decodeJwtResponse(token) {
     }).join(''));
 
     return JSON.parse(jsonPayload);
+}
+
+function setCookie(cname,cvalue,exdays) {
+  const d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  let expires = 'expires=' + d.toUTCString();
+  document.cookie = cname + '=' + cvalue + ';' + expires + ';path=/';
+}
+
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
 }

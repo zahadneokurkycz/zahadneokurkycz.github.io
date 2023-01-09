@@ -56,5 +56,12 @@ function getCookie(cname) {
 function checkSession() {
   if (getCookie('Email') != '') {
     document.getElementById('data').style.display = 'block';
+
+    document.getElementById('Id').innerHTML = 'block';
+    document.getElementById('Name').innerHTML = 'block';
+    document.getElementById('Forename').innerHTML = 'block';
+    document.getElementById('Surname').innerHTML = 'block';
+    document.getElementById('Image').innerHTML = 'block';
+    document.getElementById('Email').innerHTML = 'block';
   }
 }

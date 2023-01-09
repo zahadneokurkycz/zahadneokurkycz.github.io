@@ -2,12 +2,11 @@ function handleCredentialResponse(response) {
   const responsePayload = decodeJwtResponse(response.credential);
 
   setCookie('id', responsePayload.sub, 7);
-  setCookie('Full Name: ' + responsePayload.name);
-  setCookie('Given Name: ' + responsePayload.given_name);
-  setCookie('Family Name: ' + responsePayload.family_name);
-  setCookie("Image URL: " + responsePayload.picture);
-  setCookie("Email: " + responsePayload.email);
-
+  setCookie('Name', responsePayload.name, 7);
+  setCookie('Forename', responsePayload.given_name, 7);
+  setCookie('Surname', responsePayload.family_name, 7);
+  setCookie('Image', responsePayload.picture, 7);
+  setCookie('Email', responsePayload.email, 7);
 }
 
 function decodeJwtResponse(token) {

@@ -16,7 +16,7 @@ function logout() {
   setCookie('Surname', '', 1);
   setCookie('Image', '', 1);
   setCookie('Email', '', 1);
-  document.getElementById('data').style.display = none;
+  Document.getElementById('data').style.display = none;
 }
 
 function decodeJwtResponse(token) {
@@ -51,4 +51,10 @@ function getCookie(cname) {
     }
   }
   return '';
+}
+
+function checkSession() {
+  if (getCookie('Email') != '') {
+    Document.getElementById('data').style.display = block;
+  }
 }

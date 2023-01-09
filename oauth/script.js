@@ -9,6 +9,16 @@ function handleCredentialResponse(response) {
   setCookie('Email', responsePayload.email, 7);
 }
 
+function logout() {
+  setCookie('Id', '', 1);
+  setCookie('Name', '', 1);
+  setCookie('Forename', '', 1);
+  setCookie('Surname', '', 1);
+  setCookie('Image', '', 1);
+  setCookie('Email', '', 1);
+  var Elem = document.getElementById('data').style.display = none;
+}
+
 function decodeJwtResponse(token) {
     //By zahadneokurkycz
     var base64Url = token.split('.')[1];

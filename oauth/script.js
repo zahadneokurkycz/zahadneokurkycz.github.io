@@ -1,7 +1,7 @@
 function handleCredentialResponse(response) {
   const responsePayload = decodeJwtResponse(response.credential);
 
-  setCookie('id', responsePayload.sub, 7);
+  setCookie('Id', responsePayload.sub, 7);
   setCookie('Name', responsePayload.name, 7);
   setCookie('Forename', responsePayload.given_name, 7);
   setCookie('Surname', responsePayload.family_name, 7);

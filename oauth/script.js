@@ -57,7 +57,7 @@ function checkSession() {
   if (getCookie('Email') != '') {
     document.getElementById('data').style.display = 'block';
 
-    document.getElementById('Id').innerHTML = 'Id: ' + getCookie('Email');
+    document.getElementById('Id').innerHTML = 'Id: ' + getCookie('Id');
     document.getElementById('Name').innerHTML = 'Name: ' + getCookie('Name');
     document.getElementById('Forename').innerHTML = 'First Name: ' + getCookie('Forename');
     document.getElementById('Surname').innerHTML = 'Surname: ' + getCookie('Surname');

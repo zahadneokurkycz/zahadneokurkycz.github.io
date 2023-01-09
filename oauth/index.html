@@ -8,13 +8,14 @@
 
         <script src="https://apis.google.com/js/platform.js" async defer></script>
         
-        <script src="jwtscript.js"></script>
+        <script src="script.js"></script>
+        
+        <script src="https://accounts.google.com/gsi/client" async defer></script>
 
     </head>
 
     <body>
 
-        <script src="https://accounts.google.com/gsi/client" async defer></script>
         <div id="g_id_onload"
             data-client_id="129520680449-hae41kim4tvag7ephlpdjnm1i6ucdfog.apps.googleusercontent.com"
             data-context="signin"
@@ -33,19 +34,6 @@
             data-size="large"
             data-logo_alignment="left">
         </div>
-    
-        <script>
-            function handleCredentialResponse(response) {
-                const responsePayload = decodeJwtResponse(response.credential);
-
-                console.log("ID: " + responsePayload.sub);
-                console.log('Full Name: ' + responsePayload.name);
-                console.log('Given Name: ' + responsePayload.given_name);
-                console.log('Family Name: ' + responsePayload.family_name);
-                console.log("Image URL: " + responsePayload.picture);
-                console.log("Email: " + responsePayload.email);
-            }
-        </script>
         
     </body>
 

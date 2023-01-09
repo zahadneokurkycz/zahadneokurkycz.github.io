@@ -57,11 +57,11 @@ function checkSession() {
   if (getCookie('Email') != '') {
     document.getElementById('data').style.display = 'block';
 
-    document.getElementById('Id').innerHTML = 'Id: ';
-    document.getElementById('Name').innerHTML = 'Name: ';
-    document.getElementById('Forename').innerHTML = 'First Name: ';
-    document.getElementById('Surname').innerHTML = 'Surname: ';
-    document.getElementById('Image').src = 'Email: ';
-    document.getElementById('Email').innerHTML = 'Email: ';
+    document.getElementById('Id').innerHTML = 'Id: ' + getCookie('Email');
+    document.getElementById('Name').innerHTML = 'Name: ' + getCookie('Email');
+    document.getElementById('Forename').innerHTML = 'First Name: ' + getCookie('Email');
+    document.getElementById('Surname').innerHTML = 'Surname: ' + getCookie('Surname');
+    document.getElementById('Image').src =  getCookie('Image');
+    document.getElementById('Email').innerHTML = 'Email: ' + getCookie('Email');
   }
 }

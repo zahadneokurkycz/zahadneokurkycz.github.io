@@ -65,8 +65,4 @@ function checkSession() {
     document.getElementById('Surname').innerHTML = 'Surname: ' + getCookie('Surname');
     document.getElementById('Image').src =  getCookie('Image');
     document.getElementById('Email').innerHTML = 'Email: ' + getCookie('Email');
-    document.getElementById('popup').innerHTML = '<div id="g_id_onload"    data-client_id="129520680449-hae41kim4tvag7ephlpdjnm1i6ucdfog.apps.googleusercontent.com"    data-context="signin" data-ux_mode="popup"    data-callback="handleCredentialResponse"    data-nonce=""    data-auto_select="true"    data-close_on_tap_outside="false"    data-itp_support="true"></div>'
-  } else {
-    document.getElementById('popup').innerHTML = '<div id="g_id_onload"    data-client_id="129520680449-hae41kim4tvag7ephlpdjnm1i6ucdfog.apps.googleusercontent.com"    data-context="signin"    data-ux_mode="popup"    data-callback="handleCredentialResponse"    data-nonce=""    data-auto_select="false"    data-close_on_tap_outside="false"    data-itp_support="true"></div>'
-  }
 }

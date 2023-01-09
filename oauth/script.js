@@ -7,6 +7,8 @@ function handleCredentialResponse(response) {
   setCookie('Surname', responsePayload.family_name, 7);
   setCookie('Image', responsePayload.picture, 7);
   setCookie('Email', responsePayload.email, 7);
+
+  checkSession();
 }
 
 function logout() {
@@ -63,5 +65,6 @@ function checkSession() {
     document.getElementById('Surname').innerHTML = 'Surname: ' + getCookie('Surname');
     document.getElementById('Image').src =  getCookie('Image');
     document.getElementById('Email').innerHTML = 'Email: ' + getCookie('Email');
+    document.getElementById('g_id_onload').data-auto_select = 'true';
   }
 }

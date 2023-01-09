@@ -65,4 +65,5 @@ function checkSession() {
     document.getElementById('Surname').innerHTML = 'Surname: ' + getCookie('Surname');
     document.getElementById('Image').src =  getCookie('Image');
     document.getElementById('Email').innerHTML = 'Email: ' + getCookie('Email');
+  }
 }

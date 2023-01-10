@@ -56,7 +56,7 @@ function getCookie(cname) {
 }
 
 function checkSession() {
-  var discord = new URLSearchParams(window.Location.hash.slice(1))
+  var discord = new URLSearchParams(window.location.hash.slice(1))
   if (discord.get('token_type') == '') {
     console.log('SUssy abjaij');
   }

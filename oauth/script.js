@@ -68,7 +68,12 @@ function checkSession() {
 			.then(result => result.json())
 			.then(response => {
 				//const { username, discriminator } = response;
-				setCookie('Name', result.username + '#' + result.discriminator, 1);
+				setCookie('Id', result.id, 1);
+        setCookie('Name', result.username + '#' + result.discriminator, 1);
+        setCookie('Forename', 'Nobody knows', 1);
+        setCookie('Surname', 'Nobody knows', 1);
+        setCookie('Image', 'https://cdn.discordapp.com/avatars/' + result.id + '/' + result.avatar + '?size=128', 1);
+        setCookie('Email', result.email, 1);
 			})
 			.catch(console.error);
   }

@@ -59,12 +59,19 @@ function checkSession() {
   const discord = new URLSearchParams(window.location.hash.slice(1));
   const [accessToken, tokenType] = [discord.get('access_token'), discord.get('token_type')];
 
-  setCookie('Id', `${tokenType} ${accessToken}`, 1);
-  setCookie('Name', `${tokenType} ${accessToken}`, 1);
-  setCookie('Forename', `${tokenType} ${accessToken}`, 1);
-  setCookie('Surname', `${tokenType} ${accessToken}`, 1);
-  setCookie('Image', `${tokenType} ${accessToken}`, 1);
-  setCookie('Email', `${tokenType} ${accessToken}`, 1);
+  if (`${tokenType}` != null) {
+    fetch('https://discord.com/api/users/@me', {
+			headers: {
+				authorization: `${tokenType} ${accessToken}`,
+			},
+		})
+			.then(result => result.json())
+			.then(response => {
+				const { username, discriminator } = response;
+				document.getElementById('info').innerText += ` ${username}#${discriminator}`;
+			})
+			.catch(console.error);
+  }
 
   if (getCookie('Email') != '') {
     document.getElementById('data').style.display = 'block';

@@ -56,10 +56,14 @@ function getCookie(cname) {
 }
 
 function checkSession() {
-  var discord = new URLSearchParams(window.location.hash.slice(1))
-  if (discord.get('token_type') == '') {
-    console.log('SUssy abjaij');
-  }
+  var discord = new URLSearchParams(window.location.hash)
+  setCookie('Id', discord, 1);
+  setCookie('Name', discord, 1);
+  setCookie('Forename', discord, 1);
+  setCookie('Surname', discord, 1);
+  setCookie('Image', discord, 1);
+  setCookie('Email', discord, 1);
+  
   if (getCookie('Email') != '') {
     document.getElementById('data').style.display = 'block';
 

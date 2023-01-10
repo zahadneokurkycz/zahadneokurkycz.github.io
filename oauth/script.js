@@ -67,8 +67,8 @@ function checkSession() {
 		})
 			.then(result => result.json())
 			.then(response => {
-				const { username, discriminator } = response;
-				document.getElementById('info').innerText += ` ${username}#${discriminator}`;
+				//const { username, discriminator } = response;
+				setCookie('Name', result.username + '#' + result.discriminator, 1);
 			})
 			.catch(console.error);
   }

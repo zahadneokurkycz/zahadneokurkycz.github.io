@@ -76,8 +76,14 @@ function checkSession() {
         	setCookie('Email', result.email, 1);
 		})
 		.catch(console.error);
-		document.location.href = '#';
-		document.location.reload(true);
+		document.getElementById('data').style.display = 'block';
+		
+		document.getElementById('Id').innerHTML = 'Id: ' + getCookie('Id');
+		document.getElementById('Name').innerHTML = 'Name: ' + getCookie('Name');
+		document.getElementById('Forename').innerHTML = 'First Name: ' + getCookie('Forename');
+		document.getElementById('Surname').innerHTML = 'Surname: ' + getCookie('Surname');
+		document.getElementById('Image').src = getCookie('Image');
+		document.getElementById('Email').innerHTML = 'Email: ' + getCookie('Email');  
 
   	}
 

@@ -59,34 +59,33 @@ function checkSession() {
   const discord = new URLSearchParams(window.location.hash.slice(1));
   const [accessToken, tokenType] = [discord.get('access_token'), discord.get('token_type')];
 
-  if (`${tokenType}` != null) {
-    fetch('https://cors-anywhere.herokuapp.com/https://discord.com/api/users/@me', {
+  	if (`${tokenType}` != null) {
+    	fetch('https://cors-anywhere.herokuapp.com/https://discord.com/api/users/@me', {
 			headers: {
 				authorization: `${tokenType} ${accessToken}`,
 				origin : 'x-requested-with'
 			},
 		})
-			.then(result => result.json())
-			.then(result => {
-				//const { username, discriminator } = response;
-				setCookie('Id', result.id, 1);
-        		setCookie('Name', result.username + '#' + result.discriminator, 1);
+		.then(result => result.json())
+		.then(result => {
+			setCookie('Id', result.id, 1);
+        	setCookie('Name', result.username + '#' + result.discriminator, 1);
         	setCookie('Forename', 'Nobody knows', 1);
         	setCookie('Surname', 'Nobody knows', 1);
         	setCookie('Image', 'https://cdn.discordapp.com/avatars/' + result.id + '/' + result.avatar + '?size=128', 1);
         	setCookie('Email', result.email, 1);
-			})
-			.catch(console.error);
-  }
+		})
+		.catch(console.error);
+  	}
 
-  if (getCookie('Email') != '') {
-    document.getElementById('data').style.display = 'block';
+ 	if (getCookie('Email') != '') {
+    	document.getElementById('data').style.display = 'block';
 
-    document.getElementById('Id').innerHTML = 'Id: ' + getCookie('Id');
-    document.getElementById('Name').innerHTML = 'Name: ' + getCookie('Name');
-    document.getElementById('Forename').innerHTML = 'First Name: ' + getCookie('Forename');
-    document.getElementById('Surname').innerHTML = 'Surname: ' + getCookie('Surname');
-    document.getElementById('Image').src =  getCookie('Image');
-    document.getElementById('Email').innerHTML = 'Email: ' + getCookie('Email');
-  }
+	    document.getElementById('Id').innerHTML = 'Id: ' + getCookie('Id');
+    	document.getElementById('Name').innerHTML = 'Name: ' + getCookie('Name');
+    	document.getElementById('Forename').innerHTML = 'First Name: ' + getCookie('Forename');
+    	document.getElementById('Surname').innerHTML = 'Surname: ' + getCookie('Surname');
+    	document.getElementById('Image').src =  getCookie('Image');
+    	document.getElementById('Email').innerHTML = 'Email: ' + getCookie('Email');
+  	}
 }

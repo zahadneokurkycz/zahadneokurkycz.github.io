@@ -77,6 +77,7 @@ function checkSession() {
 		})
 		.catch(console.error);
 		document.location.href = '#';
+		checkSession();
 
   	}
 

@@ -60,9 +60,10 @@ function checkSession() {
   const [accessToken, tokenType] = [discord.get('access_token'), discord.get('token_type')];
 
   if (`${tokenType}` != null) {
-    fetch('https://discord.com/api/users/@me', {
+    fetch('https://cors-anywhere.herokuapp.com/https://discord.com/api/users/@me', {
 			headers: {
 				authorization: `${tokenType} ${accessToken}`,
+				origin : 'x-requested-with'
 			},
 		})
 			.then(result => result.json())

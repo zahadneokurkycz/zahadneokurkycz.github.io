@@ -7,8 +7,6 @@ function handleCredentialResponse(response) {
   setCookie('Surname', responsePayload.family_name, 7);
   setCookie('Image', responsePayload.picture, 7);
   setCookie('Email', responsePayload.email, 7);
-
-  checkSession();
 }
 
 function logout() {

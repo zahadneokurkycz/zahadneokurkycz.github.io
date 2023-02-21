@@ -76,7 +76,7 @@ function checkSession() {
         	setCookie('Email', result.email, 1);
 		})
 		.catch(console.error);
-
+		
   	}
 
  	if (getCookie('Email') != '') {

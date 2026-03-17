@@ -3,6 +3,7 @@ function guess() {
   if (number === null) return;
 
   document.getElementById("pepa").innerHTML = "Asking CHATGPT";
+  document.getElementById("idk").style.width = "100%";
   setTimeout(() => {
     document.getElementById("pepa").innerHTML = "Asking Pepa Pig";
     setTimeout(() => {

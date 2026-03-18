@@ -17,9 +17,9 @@ function guess(e) {
 
     $("#pepa").text("Asking ChatGPT")
     setTimeout(() => {
-        $("#pepa").text("Asking austrian painter 🫡")
+        $("#pepa").text("Asking austrian painter 🫡🙋🙋 🇦🇹🇩🇪")
         setTimeout(() => {
-            $("#pepa").text("Asking the Supreme Leader of Democratic People's republic of Korea Kim Jong Un")
+            $("#pepa").text("Asking the Supreme Leader of Democratic People's republic of Korea Kim Jong Un ☭☭☭")
             setTimeout(() => {
                 $("#pepa").text("Asking random AI (actually an indian)")
                 setTimeout(() => {

@@ -24,11 +24,17 @@ function guess(e) {
 
     $("#pepa").text("Asking ChatGPT")
     setTimeout(() => {
-        if (!safe) { $("#pepa").text("Asking austrian painter 🫡🙋🙋 🇦🇹🇩🇪") }
-        else { ("#pepa").text("Reading your mind") }
+        if (!safe) { 
+            $("#pepa").text("Asking austrian painter 🫡🙋🙋 🇦🇹🇩🇪");
+        } else {
+            $("#pepa").text("Reading your mind");
+        }
         setTimeout(() => {
-            if (!safe) { $("#pepa").text("Asking the Supreme Leader of Democratic People's republic of Korea Kim Jong Un  🇰🇵 🇰🇵 🇰🇵 ☭☭☭") }
-            else { ("#pepa").text("Making a random guess") }
+            if (!safe) {
+                $("#pepa").text("Asking the Supreme Leader of Democratic People's republic of Korea Kim Jong Un  🇰🇵 🇰🇵 🇰🇵 ☭☭☭");
+            } else {
+                $("#pepa").text("Making a random guess");
+            }
             setTimeout(() => {
                 $("#pepa").text("Asking random AI (actually an indian)")
                 setTimeout(() => {

@@ -19,7 +19,7 @@ function guess(e) {
     setTimeout(() => {
         $("#pepa").text("Asking austrian painter 🫡🙋🙋 🇦🇹🇩🇪")
         setTimeout(() => {
-            $("#pepa").text("Asking the Supreme Leader of Democratic People's republic of Korea Kim Jong Un ☭☭☭")
+            $("#pepa").text("Asking the Supreme Leader of Democratic People's republic of Korea Kim Jong Un  🇰🇵 🇰🇵 🇰🇵 ☭☭☭")
             setTimeout(() => {
                 $("#pepa").text("Asking random AI (actually an indian)")
                 setTimeout(() => {

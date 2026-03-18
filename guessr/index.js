@@ -22,7 +22,7 @@ function guess(e) {
         else { ("#pepa").text("Reading your mind") }
         setTimeout(() => {
             if (!safe) { $("#pepa").text("Asking the Supreme Leader of Democratic People's republic of Korea Kim Jong Un  🇰🇵 🇰🇵 🇰🇵 ☭☭☭") }
-            else { }
+            else { ("#pepa").text("Making a random guess") }
             setTimeout(() => {
                 $("#pepa").text("Asking random AI (actually an indian)")
                 setTimeout(() => {

@@ -5,7 +5,7 @@ const resultwindow = new bootstrap.Modal('#resultwindow')
 let start;
 
 function guess(e) {
-    let safe = false;
+    let safe = true;
     e.preventDefault();
     numberwindow.hide();
     mainwindow.show();

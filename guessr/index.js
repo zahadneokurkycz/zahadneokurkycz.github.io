@@ -5,6 +5,7 @@ const resultwindow = new bootstrap.Modal('#resultwindow')
 let start;
 
 function guess(e) {
+    let safe = false;
     e.preventDefault();
     numberwindow.hide();
     mainwindow.show();
@@ -17,9 +18,11 @@ function guess(e) {
 
     $("#pepa").text("Asking ChatGPT")
     setTimeout(() => {
-        $("#pepa").text("Asking austrian painter 🫡🙋🙋 🇦🇹🇩🇪")
+        if (!safe) { $("#pepa").text("Asking austrian painter 🫡🙋🙋 🇦🇹🇩🇪") }
+        else { ("#pepa").text("Reading your mind") }
         setTimeout(() => {
-            $("#pepa").text("Asking the Supreme Leader of Democratic People's republic of Korea Kim Jong Un  🇰🇵 🇰🇵 🇰🇵 ☭☭☭")
+            if (!safe) { $("#pepa").text("Asking the Supreme Leader of Democratic People's republic of Korea Kim Jong Un  🇰🇵 🇰🇵 🇰🇵 ☭☭☭") }
+            else { }
             setTimeout(() => {
                 $("#pepa").text("Asking random AI (actually an indian)")
                 setTimeout(() => {

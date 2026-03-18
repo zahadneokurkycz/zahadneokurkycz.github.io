@@ -4,8 +4,14 @@ const resultwindow = new bootstrap.Modal('#resultwindow')
 
 let start;
 
+let safe = false;
+
+function setsafe() {
+    if (safe) { safe = false; }
+    else { safe = true; }
+}
+
 function guess(e) {
-    let safe = true;
     e.preventDefault();
     numberwindow.hide();
     mainwindow.show();
